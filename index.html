@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC y Recomendaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de IMC y Recomendaciones</h1>
+
+        <form id="bmi-form">
+            <label for="age">Edad:</label>
+            <input type="number" id="age" required>
+
+            <label for="height">Altura (cm):</label>
+            <input type="number" id="height" required>
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label for="exercise">Horas de ejercicio al día:</label>
+            <input type="number" id="exercise" required>
+
+            <label for="goal">Objetivo de peso:</label>
+            <select id="goal">
+                <option value="lose-weight">Perder peso</option>
+                <option value="maintain-weight">Mantener peso</option>
+                <option value="gain-weight">Ganar peso</option>
+                <option value="gain-muscle">Ganar masa muscular</option>
+            </select>
+
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        <div id="result-container">
+            <h2>Resultado:</h2>
+            <p id="result"></p>
+            <p id="recommendations"></p>
+        </div>
+
+        <div>
+            <label for="rating">Califica esta recomendación:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5">
+            <button onclick="rateRecommendation()">Calificar</button>
+        </div>
+
+        <div id="rating-info">
+            <h2>Calificaciones:</h2>
+            <p>Promedio de calificación: 0.0 (0 votos)</p>
+        </div>
+
+        <h2>Historial de IMC:</h2>
+        <ul id="bmi-history"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
